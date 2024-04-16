@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang = "fr">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "framework.css">
+    <title> Frameworkcss </title>
+</head>
+<body>
+    <nav>
+        <div class = "brand">
+            <a href = "#" id = "framework"> Frameworkcss </a>
+        </div>
+        <div class = "menu-toggle"> &#9776; </div>
+        <ul class = "menu">
+            <li><a href = "#" class = "hover"> Home </a></li>
+            <li><a href = "#" class = "hover"> Link </a></li>
+            <li class = "dropdown">
+                <a href = "#" class = "hover"> Dropdown ▽ </a>
+                <ul class = "dropdown-menu">
+                    <li><a href = "#" class = "dropdown-under-menu"> Action </a></li>
+                    <li><a href = "#" class = "dropdown-under-menu"> Another action </a></li>
+                    <li><a href = "#" class = "dropdown-under-menu"> Something else here </a></li>
+                </ul>
+            </li>
+            <li class = "search">
+                <form>
+                    <input type = "text" name = "search_bar" class = "search_bar">
+                    <button type="submit" name = "search_button"> Search </button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-12 col-md-6 col-lg-8 box">
+                <p> beep </p>
+            </div>
+            <div class = "col-12 col-md-6 col-lg-4 box">
+                <p> beep </p>
+            </div>
+            <div class = "col box">
+                <p> beep </p>
+            </div>
+            <div class = "col box">
+                <p> beep </p>
+            </div>
+        </div>
+    </div>
+    <div class = "container-fluid">
+        <div class = "row">
+            <div class = "col">
+                <button type = "button" name = "primary" class = "btn btn-primary btn-xl hidden-sm visible-md"> Primary </button>
+            </div>
+            <div class = "col">
+                <button type = "button" name = "secondary" class = "btn btn-secondary btn-lg hidden-md visible-lg"> Secondary </button>
+            </div>
+            <div class = "col">
+                <button type = "button" name = "success" class = "btn btn-success btn-block hidden-sm visible-md"> Success </button>
+            </div>
+            <div class = "col">
+                <button type = "button" name = "danger" class = "btn btn-danger btn-sm"> Danger </button>
+            </div>
+            <div class = "col">
+                <button type = "button" name = "warning" class = "btn btn-warning btn-xs"> Warning </button>
+            </div>
+            <div class = "col">
+                <button type = "button" name = "info" class = "btn btn-info"> Info </button>
+            </div>
+            <div class = "col">
+                <button type = "button" name = "light" class = "btn btn-light"> Light </button>
+            </div>
+            <div class = "col">
+                <button type = "button" name = "dark" class = "btn btn-dark"> Dark </button>
+            </div>
+            <div class = "col">
+                <button type = "button" name = "link" class = "btn btn-link"> Link </button>
+            </div>
+            <div class = "col">
+                <button type = "button" name = "disabled" class = "btn visible hidden-sm visible-md" disabled> Disabled </button>
+            </div>
+        </div>
+    </div>
+    <div class = "container">
+        <div class = "row">
+            <div class = "col">
+                <img src = "shiona.png" alt = "Shiona" class = "img-responsive img-thumbail img-blur">
+            </div>
+        </div>
+    </div>
+    <p class = "text-muted bg-muted hidden-sm visible-md"> Je suis une phrase muette </p>    
+    <p class = "text-primary bg-primary hidden-sm visible-md"> Je suis une phrase primaire </p>
+    <p class = "text-success bg-success hidden-sm visible-md"> Je suis une phrase succès </p>
+    <p class = "text-info bg-info hidden-sm visible-md"> Je suis une phrase info </p>   
+    <p class = "text-warning bg-warning hidden-xl"> Je suis une phrase danger </p>
+    <p class = "text-error bg-error hidden-sm visible-md"> Je suis une phrase erreur </p>
+    <p class = "alert-success hidden-sm visible-md"> Je suis une alerte de type succès </p>
+    <p class = "alert-info hidden-sm visible-md"> Je suis une alerte de type info </p>
+    <p class = "alert-warning hidden-sm visible-md"> Je suis une alerte de type warning </p>
+    <p class = "alert-danger hidden-sm visible-md"> Je suis une alerte de type danger </p>
+    <div class = "container">
+        <div class = "row">
+            <div class = "col">
+                <button type = "button" name = "print" class = "btn hidden-print"> Print </button>
+            </div>
+            <div class = "col">
+                <p class = "visible-print"> Je suis visible en pdf </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

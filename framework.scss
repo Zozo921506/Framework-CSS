@@ -1,0 +1,647 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container
+{
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-fluid
+{
+    max-width: 100%;
+}
+
+.box
+{
+    background-color: aquamarine;
+    border: 1px solid black;
+}
+
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+    .col
+    {
+        flex: 1;
+    }
+    
+    @for $size from 1 through 12
+    {
+        .col-#{$size}
+        {
+            width: calc($size / 12 * 100%);
+        }
+    }
+}
+
+.btn 
+{
+    color: white;
+    cursor: pointer;
+    padding: 2%;
+    border: none;
+}
+
+
+.btn-primary 
+{
+    background-color: blue;
+
+    &:hover
+    {
+        background-color: darkblue;
+    }
+
+    &:active
+    {
+        background-color: white;
+        color: blue;
+    }
+}
+
+.btn-secondary 
+{
+    background-color: rgb(109, 109, 109);
+
+    &:hover
+    {
+        background-color: rgb(70, 70, 70);
+    }
+
+    &:active
+    {
+        color: rgb(70, 70, 70);
+        background-color: white;
+    }
+}
+
+.btn-success 
+{
+    background-color: green;
+
+    &:hover
+    {
+        background-color: darkgreen;
+    }
+
+    &:active
+    {
+        background-color: white;
+        color: green;
+    }
+}
+
+.btn-danger 
+{
+    background-color: red;
+
+    &:hover
+    {
+        background-color: darkred;
+    }
+
+    &:active
+    {
+        background-color: white;
+        color: red;
+    }
+}
+
+.btn-warning 
+{
+    background-color: rgb(255, 200, 0);
+    color: black;
+
+    &:hover
+    {
+        background-color: rgb(200, 145, 0);
+    }
+
+    &:active
+    {
+        background-color: white;
+        color: rgb(200, 145, 0);
+    }
+}
+
+.btn-info 
+{
+    background-color: rgb(3, 187, 187);
+
+    &:hover
+    {
+        background-color: rgb(3, 120, 120);
+    }
+
+    &:active
+    {
+        background-color: white;
+        color: rgb(3, 187, 187);
+    }
+}
+
+.btn-light 
+{
+    background-color: lightgray;
+    color: black;
+
+    &:hover
+    {
+        background-color: gray;
+    }
+
+    &:active
+    {
+        background-color: black;
+        color: lightgray;
+    }
+}
+
+.btn-dark 
+{
+    background-color: black;
+
+    &:hover
+    {
+        background-color: rgb(43, 43, 43);
+    }
+
+    &:active
+    {
+        background-color: white;
+        color: black;
+    }
+}
+
+.btn-link 
+{
+    color: rgb(0, 170, 255);
+    text-decoration: underline;
+    background-color: rgba(0, 0, 0, 0);
+
+    &:hover
+    {
+        color: rgb(0, 130, 215);
+    }
+
+    &:active
+    {
+        background-color: rgb(0, 170, 255);
+        color: white;
+    }
+}
+
+.btn-xl
+{
+    padding: 18px, 20px;
+    font-size: 17px;
+}
+
+.btn-lg
+{
+    padding: 15px, 17px;
+    font-size: 14px;
+}
+
+.btn-block
+{
+    width: 100%;
+    font-size: 15px;
+}
+
+.btn-sm
+{
+    padding: 4px, 14px;
+    font-size: 12px;
+}
+
+.btn-xs
+{
+    padding: 2px, 8px;
+    font-size: 8px;
+}
+
+button:disabled
+{
+    color: red;
+    border: 1px solid red;
+    cursor: not-allowed;
+}
+
+.img-responsive 
+{
+    max-width: 100%;
+    height: auto;
+}
+
+.img-rounded 
+{
+    border-radius: 10px;
+}
+
+.img-circle 
+{
+    border-radius: 50%;
+}
+
+.img-thumbnail 
+{
+    padding: 4px;
+    background-color: #f8f9fa;
+    border: 1px solid #656667;
+    border-radius: 5px;
+}
+
+.img-blur 
+{
+    filter: blur(3px);
+}
+
+.text-muted 
+{
+    color: #6c757d;
+}
+
+.text-primary 
+{
+    color: #007bff;
+}
+
+.text-success 
+{
+    color: #28a745;
+}
+
+.text-info 
+{
+    color: #17a2b8;
+}
+
+.text-warning 
+{
+    color: #ffc107;
+}
+
+.text-error 
+{
+    color: #dc3545;
+}
+
+.bg-muted 
+{
+    background-color: #2a2d30;
+}
+
+.bg-primary 
+{
+    background-color: #0253a9;
+}
+
+.bg-success 
+{
+    background-color: #71e08b;
+}
+
+.bg-info 
+{
+    background-color: #4dd3e7;
+}
+
+.bg-warning 
+{
+    background-color: #755b13;
+}
+
+.bg-error 
+{
+    background-color: #f2959e;
+}
+
+.alert 
+{
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success 
+{
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-info 
+{
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+.alert-warning 
+{
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.alert-danger 
+{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.hidden-sm 
+{
+    display: none;
+}
+
+.hidden-md 
+{
+    display: none;
+}
+
+.hidden-lg 
+{
+    display: none;
+}
+
+.hidden-xl 
+{
+    display: none;
+}
+
+.visible-print 
+{
+    display: block !important;
+}
+
+.hidden-print 
+{
+    display: none !important;
+}
+
+nav 
+{
+    background-color: #bee5eb;
+}
+
+.brand a 
+{
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+.menu 
+{
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li 
+{
+    margin-right: 20px;
+}
+
+.menu li:last-child 
+{
+    margin-left: auto;
+}
+
+.menu li a 
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+.hover:hover
+{
+    background-color: #88a4a8;
+}
+
+.dropdown-menu 
+{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu 
+{
+    display: block;
+    background-color: #bee5eb;
+}
+
+.dropdown-under-menu:hover
+{
+    background-color: #91b0b5;
+}
+
+.search form 
+{
+    display: flex;
+}
+
+.search .search_bar 
+{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.search button 
+{
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.search button:hover 
+{
+    background-color: #0056b3;
+}
+
+.menu-toggle
+{
+    display: none;
+}
+
+#framework
+{
+    width: 100%;
+	height: 100%;
+	animation: pulse 5s infinite;
+	display: flex;
+	flex-direction: column;
+}
+
+@keyframes pulse 
+{
+	0% {
+		color: rgb(2, 2, 147);
+	}
+
+	25% {
+		color: rgb(1, 121, 1);
+	}
+
+	50% {
+		color: rgb(213, 156, 14);
+	}
+
+	75% {
+		color: rgb(201, 98, 7);
+	}
+
+	100% {
+		color: rgb(185, 0, 0);
+	}
+}
+
+@mixin grid($device)
+{
+    .row
+    {
+        .col-#{$device}
+        {
+            flex: 1;
+        }
+        
+        @for $size from 1 through 12
+        {
+            .col-#{$device}-#{$size}
+            {
+                width: calc($size / 12 * 100%);
+            }
+        }
+    }
+}
+
+@media (min-width: 576px)
+{
+    @include grid('sm');
+
+    .container
+    {
+        max-width: 540px;
+    }
+
+        .visible-sm 
+    {
+        display: block;
+    }
+}
+
+@media (min-width: 768px)
+{
+    @include grid('md');
+
+    .container
+    {
+        max-width: 720px;
+    }
+
+        .visible-md 
+    {
+        display: block;
+    }
+}
+
+@media (min-width: 992px)
+{
+    @include grid('lg');
+
+    .container
+    {
+        max-width: 960px;
+    }
+
+        .visible-lg 
+    {
+        display: block;
+    }
+}
+
+@media (min-width: 1200px)
+{
+    @include grid('xl');
+
+    .container
+    {
+        max-width: 1140px;
+    }
+
+    .visible-xl 
+    {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) 
+{
+    .menu-toggle 
+    {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .menu 
+    {
+        display: none;
+        flex-direction: column;
+        background-color: #bee5eb;
+        position: fixed;
+        right: 0;
+        width: 100%;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    .menu.active 
+    {
+        display: flex;
+    }
+
+    .menu li 
+    {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle:hover + .menu, .menu:hover 
+    {
+        display: block;
+    }
+
+    .menu-toggle:hover
+    {
+        background-color: #91b0b5;
+    }
+
+    .brand, .menu-toggle, .menu 
+    {
+        padding: 0 10px;
+    }
+}
